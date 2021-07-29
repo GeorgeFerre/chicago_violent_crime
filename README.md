@@ -25,7 +25,7 @@ I initially looked at Linear Regression, Decision Tree Regression, Stochastic Gr
 
 From there, I used hyper parameter tuning on SGD and SVR models, and was able to raise the r-squared score to .77 for both models.
 
-![preds](cap_predsvresults.png)
+![preds](/images/cap_predsvresults.png)
 
 ## Conclusions and Next Steps
 Based on the data available, it appears that violence is a good predictor of upcoming violence, and that weekends are typically more dangerous than weekdays. These are not new insights in themselves, but it is important to note that by reducing victim count from 7 days to 2 days dramatically incrased the models r-squared score. Based on this it appears that if violence can be curbed early, it is possible to mitigate it quite a bit.
