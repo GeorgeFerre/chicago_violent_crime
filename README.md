@@ -1,5 +1,9 @@
 ## Business Problem
-Chicago needs to face an epidemic of violence within the city. One way to face the problem is to use machine learning to determine how many victims of violent crime to expect on a given day. Using data from the city of Chicago, I will train regression models to predict upcoming crimes so that emergency responders can prepare to prevent and mitigate the effects of violent crime.
+Chicago needs to face an epidemic of violence within the city. One way to face the problem is to use machine learning to determine how many victims of violent crime to expect on a given day. Using data from the city of Chicago, I will train regression models to predict upcoming crimes.
+
+The underlying principal of this project is fairly intuitive: violent acts will lead to more violent acts. However, this project will examine the victims of violent crime in Chicago and see if differing victims (different ages, sexes, races, etc) effect predictions for future violent crime.
+
+The model itself be created for the Chicago government to help predict the amount of first responders needed on a given day. For example, if a spike in crime occurs on a given day, the Chicago PD can proactively schedule more police officers and 911 operators.
 
 ## Guide
 For a quick rundown of my project, view my [slideshow](https://github.com/GeorgeFerre/chicago_violent_crime/blob/main/chi_vi_slides.pdf).
