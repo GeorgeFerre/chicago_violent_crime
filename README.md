@@ -1,6 +1,11 @@
 ## Business Problem
 Chicago needs to face an epidemic of violence within the city. One way to face the problem is to use machine learning to determine how many victims of violent crime to expect on a given day. Using data from the city of Chicago, I will train regression models to predict upcoming crimes so that emergency responders can prepare to prevent and mitigate the effects of violent crime.
 
+## Guide
+For a quick rundown of my project, view my [slideshow](https://github.com/GeorgeFerre/chicago_violent_crime/blob/main/chi_vi_slides.pdf).
+My main technical notebook is [here](https://github.com/GeorgeFerre/chicago_violent_crime/blob/main/Regression_Models.ipynb)
+For my dahsboard (WIP!) see [here](https://github.com/GeorgeFerre/flask_dsc_072721)
+
 ## Data Sources and Methodology
 Data was pulled from the [Chicago Data Portal](https://data.cityofchicago.org/Public-Safety/Violence-Reduction-Victims-of-Homicides-and-Non-Fa/gumc-mgzr) and includes 20k data points of victims of violent crimes between 2016 and 2021. Each row of data includes information about date, location, age, sex, race, police beat, and nearby access to street outreach organizations.
 
