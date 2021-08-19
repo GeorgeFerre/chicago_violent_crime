@@ -37,7 +37,7 @@ From there, I used hyper parameter tuning on SGD and SVR models and checked Mean
 * SGD: 22.68
 * SVR: 22.88
 
-![preds](/images/cap_predsvresults.png)
+![preds](/images/preds_results_v2.png)
 
 ## Conclusions and Next Steps
 Unfortunately, it appears that our model is not currently successful at predicting the amount of victims to be expected on a given day in Chicago. We have a MSE of 19 for both SGD and SVR models, and most data points are below 25 victims.
