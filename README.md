@@ -7,7 +7,7 @@ The model itself be created for the Chicago government to help predict the amoun
 
 ## Guide
 For a quick rundown of my project, view my [slideshow](https://github.com/GeorgeFerre/chicago_violent_crime/blob/main/chi_vi_slides.pdf).
-My main technical notebook is [here](https://github.com/GeorgeFerre/chicago_violent_crime/blob/main/Regression_Models.ipynb)
+My main technical notebook is [here](https://github.com/GeorgeFerre/chicago_violent_crime/blob/main/Regression_Models_v2.ipynb)
 For my dahsboard (WIP!) see [here](https://github.com/GeorgeFerre/flask_dsc_072721)
 
 ## Data Sources and Methodology
@@ -23,20 +23,23 @@ After reviewing data, it appears that there are some trends. Younger (from teens
 ![Cap_Heatmap](/images/Cap_Heatmap.png)
 
 ## Results
-Currently the total amount of recent victims and day of week appear to be the best indicators of how much crime will happen on a given day. Race, age, sex, and location of the victims currently do not appear to cause significant variation in the total future victims.
+Currently the best features for predicting the amount of victims are the day of the week and the month. The counts of victims by different demographics did not seem to impact the models used, although the overall count of recent victims (from the 7 days prior to the predicted day) did seem to slightly help the model.
 
 I initially looked at Linear Regression, Decision Tree Regression, Stochastic Gradient Descent Regression, and Supoort Vector Regression models. After finding best features, the cross validation r-squared scores were as follows. 
 
-* Linear: .74
-* Decision Tree: .47
-* SGD: .74
-* SVR: .74
+* Linear: .34
+* Decision Tree: -.39
+* SGD: .34
+* SVR: .33
 
-From there, I used hyper parameter tuning on SGD and SVR models, and was able to raise the r-squared score to .77 for both models.
+From there, I used hyper parameter tuning on SGD and SVR models and checked Mean Squared Error. The MSEs are as follows:
+
+* SGD: 22.68
+* SVR: 22.88
 
 ![preds](/images/cap_predsvresults.png)
 
 ## Conclusions and Next Steps
-Based on the data available, it appears that violence is a good predictor of upcoming violence, and that weekends are typically more dangerous than weekdays. These are not new insights in themselves, but it is important to note that by reducing victim count from 7 days to 2 days dramatically incrased the models r-squared score. Based on this it appears that if violence can be curbed early, it is possible to mitigate it quite a bit.
+Unfortunately, it appears that our model is not currently successful at predicting the amount of victims to be expected on a given day in Chicago. We have a MSE of 19 for both SGD and SVR models, and most data points are below 25 victims.
 
-Based on the fact that time data appears to be so important here, I would like to investigate time series for this data. Additionally, I would like to build a dashboard that shows predictions based on recent victims and day of week. 
+It appears based on our analysis that the only solid predictors we have are day of week and month. While there does appear to be some truth that recent violence will lead to more acts of violence (adding in that data proved to make the model more reliable), it is not enough to make good predictions for our purposes.
